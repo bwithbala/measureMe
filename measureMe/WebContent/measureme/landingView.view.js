@@ -57,7 +57,7 @@ sap.ui.jsview("measureme.landingView", {
 	    				
 	    				butStartStop.setText("Start");
 	    				
-    					alert("Inside Stop");
+    					//alert("Inside Stop");
     					   navigator.geolocation.watchPosition(showPositionStop,showError);
     					   
     					   alert("Start Lat" +startLat);
@@ -157,8 +157,8 @@ sap.ui.jsview("measureme.landingView", {
 		
 		function showPositionStart(position)
 		{
-		var latlon=position.coords.latitude+","+position.coords.longitude;
-		alert("Lat & Long" +latlon);
+	//	var latlon=position.coords.latitude+","+position.coords.longitude;
+	//	alert("Lat & Long" +latlon);
 		
 		startLat = position.coords.latitude;
 		startLong = position.coords.longitude;
@@ -177,8 +177,8 @@ sap.ui.jsview("measureme.landingView", {
 		
 		function showPositionStop(position)
 		{
-			alert("Inside Show Position Stop");
-		var latlon=position.coords.latitude+","+position.coords.longitude;
+			//alert("Inside Show Position Stop");
+		//var latlon=position.coords.latitude+","+position.coords.longitude;
 	//	alert("Lat & Long" +latlon);
 		
 		stopLat = position.coords.latitude;
