@@ -221,6 +221,7 @@ sap.ui.jsview("measureme.landingView", {
 		}
 		
 		function distance(lat1, lon1, lat2, lon2) {
+			alert("Inside Distance");
 			
 			    var radlat1 = Math.PI * lat1/180;
 			
@@ -241,7 +242,7 @@ sap.ui.jsview("measureme.landingView", {
 			    dist = dist * 180/Math.PI;
 			
 			    dist = dist * 60 * 1.1515;
-
+                alert("Dist:" +dist);
 			    return dist;
 			
 			}
