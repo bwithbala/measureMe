@@ -45,7 +45,8 @@ sap.ui.jsview("measureme.landingView", {
     	    			
     					if (navigator.geolocation)
     					{    						
-    					   navigator.geolocation.watchPosition(showPositionStart,showError);
+    					alert("Before Show Position Start Function ");
+    					   navigator.geolocation.getCurrentPosition(showPositionStart,showError);
     					}
     					else{
     						alert("Geolocation is not supported by this browser.");
@@ -57,8 +58,15 @@ sap.ui.jsview("measureme.landingView", {
 	    				
 	    				butStartStop.setText("Start");
 	    				
-    					//alert("Inside Stop");
-    					   navigator.geolocation.watchPosition(showPositionStop,showError);
+    					alert("Inside Stop");
+    					if (navigator.geolocation)
+    					{    						
+    					alert("Before Show Position Stop Function ");    					
+    					   navigator.geolocation.getCurrentPosition(showPositionStop,showError);
+    					}
+    					else{
+    						alert("Geolocation is not supported by this browser.");
+    						}      
     					   
     					   alert("Start Lat" +startLat);
     					   alert("Start Long" +startLong);
@@ -162,6 +170,8 @@ sap.ui.jsview("measureme.landingView", {
 		
 		startLat = position.coords.latitude;
 		startLong = position.coords.longitude;
+		alert("Start Lat " +startLat);
+		alert("Start Long " +startLong);
 		
 		
 		/*var  img_url="http://maps.googleapis.com/maps/api/staticmap?center="
@@ -183,6 +193,8 @@ sap.ui.jsview("measureme.landingView", {
 		
 		stopLat = position.coords.latitude;
 		stopLong = position.coords.longitude;
+		alert("Stop Lat " +stopLat);
+		alert("Sttop Long " +stopLong);
 
 		/*var  img_url="http://maps.googleapis.com/maps/api/staticmap?center="
 		+latlon+"&zoom=14&size=300x200&sensor=false";
