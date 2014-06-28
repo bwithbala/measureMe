@@ -243,7 +243,7 @@ sap.ui.jsview("measureme.landingView", {
 			
 			    dist = dist * 60 * 1.1515;
                 alert("Dist:" +dist);
-			    return dist;
+			//    return dist;
 			
 			}
 		
